@@ -19,7 +19,7 @@ module.exports = {
         exclude: /(node_mdules|bower_components)/,
         loader: 'babel', // 'babel-loader' is also a valid name to reference
         query: {
-          presets: ['es2015']
+          presets: ['babel-preset-es2015'].map(require.resolve)
         }
       }
     ]
