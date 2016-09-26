@@ -3,12 +3,12 @@ var yeti = require('yeticss')
 var path = require('path')
 
 module.exports = {
-  context: __dirname + '/app',
+  context: path.join(__dirname, '/app'),
   entry: './app.js',
   output: {
-    path: __dirname + '/build',
+    path: path.join(__dirname, '/build'),
     filename: 'bundle.js'
-  }, 
+  },
   module: {
     loaders: [
       { test: /\.pug$/, loader: 'pug'},
@@ -33,8 +33,7 @@ module.exports = {
       filename: 'index.html',
       // favicon: 'favicon.ico',
       template: path.join(__dirname, '/app/pug/index.pug'),
-      title: 'Jade demo'
+      title: 'Page Title'
     }),
-    // new ExtractTextPlugin('styles.css')
   ]
 }
