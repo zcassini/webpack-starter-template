@@ -2,7 +2,7 @@
 A starting template with webpack, stylus, yeticss, and jade.
 
 #####Clone the repo to a new directory
-`git clone git@github.com:zcassini/fcc-twitchtv.git PROJECTNAME`
+`git clone git@github.com:zcassini/webpack-starter-template.git PROJECTNAME`
 
 ##### Create a repo on Github using PROJECTNAME and set origin
 ```
@@ -18,4 +18,11 @@ hub create
 `webpack`
 
 ##### Start server
-`webpack-dev-server`
+`npm start`
+
+##### Build the site
+`npm build`
+
+##### Build & Deploy to Github
+`npm deploy`
+
