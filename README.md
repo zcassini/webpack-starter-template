@@ -4,11 +4,13 @@ A starting template with webpack, stylus, yeticss, and jade.
 #####Clone the repo to a new directory
 `git clone git@github.com:zcassini/webpack-starter-template.git PROJECTNAME`
 
-##### Create a repo on Github using PROJECTNAME and set origin
+##### Create a repo on Github using PROJECTNAME
+##### Set new origin and push to github
 ```
 cd PROJECTNAME
 git remote remove origin
 hub create
+git push -u origin master
 ```
 
 ##### Install node packages
