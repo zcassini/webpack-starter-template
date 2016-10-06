@@ -27,6 +27,7 @@
     "pug-loader": "^2.3.0",
     "style-loader": "^0.13.1",
     "sugarss": "^0.1.6",
-    "webpack": "^1.13.2"
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.2"
   }
 }
