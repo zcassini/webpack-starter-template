@@ -1,9 +1,11 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin')
-var path = require('path')
-// var yeti = require('yeticss')
-var precss       = require('precss')
-var autoprefixer = require('autoprefixer')
-var sugarss      = require('sugarss')
+var path              = require('path')
+var precss            = require('precss')
+var autoprefixer      = require('autoprefixer')
+var sugarss           = require('sugarss')
+var fontMagician      = require('postcss-font-magician')
+var rucksack          = require('rucksack-css')
+var lost              = require('lost')
 
 module.exports = {
   context: path.join(__dirname, '/app'),
@@ -14,10 +16,7 @@ module.exports = {
   },
   module: {
     loaders: [
-      { test: /\.pug$/, loader: 'pug'},
-      // { test: /\.styl$/,
-      //   loader: 'style-loader!css-loader!stylus-loader'
-      //   },
+      { test: /\.pug$/, loader: 'pug' },
       { test: /\.js$/,
         exclude: /(node_mdules|bower_components)/,
         loader: 'babel',
@@ -25,28 +24,23 @@ module.exports = {
           presets: ['babel-preset-es2015'].map(require.resolve)
         }
       },
-      {
-        test:   /\.sss$/,
-        loader: "style-loader!css-loader!postcss-loader?parser=sugarss"
-      },
+      { test: /\.sss$/,
+        loader: 'style-loader!css-loader!postcss-loader?parser=sugarss'
+      }
     ]
   },
   postcss: function () {
     return {
-      plugins: [autoprefixer, precss],
+      plugins: [autoprefixer, precss, lost, rucksack, fontMagician],
       parser: sugarss
     }
   },
-  // stylus: {
-  //   // use: [require('yeticss')]
-  //   use: [yeti()]
-  // },
   plugins: [
     new HtmlWebpackPlugin({
       filename: 'index.html',
       // favicon: 'favicon.ico',
       template: path.join(__dirname, '/app/pug/index.pug'),
       title: 'Page Title'
-    }),
+    })
   ]
 }
