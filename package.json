@@ -4,7 +4,7 @@
   "description": "",
   "main": ".#content.js",
   "scripts": {
-    "start": "webpack-dev-server --colors --open",
+    "start": "webpack-dev-server --colors --port 8081 --open",
     "build": "webpack --progress --colors",
     "deploy": "gh-pages -d build"
   },

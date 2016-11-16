@@ -14,17 +14,17 @@ git push -u origin master
 ```
 
 ##### Install node packages
-`npm install`
+`yarn install`
 
 ##### Build project
 `webpack`
 
-##### Start server
-`npm start`
+##### Start server --defaults to port 8080
+`yarn start`
 
 ##### Build the site
-`npm build`
+`yarn build`
 
-##### Build & Deploy to Github
-`npm deploy`
+##### Deploy to Github
+`yarn deploy`
 
