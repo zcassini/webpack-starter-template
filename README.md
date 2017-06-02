@@ -1,7 +1,8 @@
 # webpack-starter-template
-A starting template with webpack, stylus, yeticss, and jade.
-#####Fork the project
-#####Clone the repo to a new directory
+A starting static site template with webpack, babel, postcss, lostgrid and jade.
+
+##### Fork the project
+##### Clone the repo to a new directory
 `git clone xxxxx PROJECTNAME`
 
 ##### Create a repo on Github using PROJECTNAME
