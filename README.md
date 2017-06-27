@@ -1,5 +1,5 @@
 # webpack-starter-template
-A starting static site template with webpack, babel, postcss, lostgrid and jade.
+A starting static site template with webpack, babel, postcss, stylus, pug and lostgrid.
 
 ##### Fork the project
 ##### Clone the repo to a new directory
