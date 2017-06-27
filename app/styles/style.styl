@@ -1,2 +1,162 @@
 body
-  background : rgba(#fff, 0.8)
+  height: 100vh
+  display: flex
+  align-items: center
+  justify-content: center
+  
+.wrapper
+  // background: blue
+  display: grid
+  grid-rows: repeat(1fr, 6)
+  grid-columns: repeat(25%, 4)
+  grid-gap: 10px
+  height: 500px
+  width: 350px
+  margin: 0 auto
+  // width: 221
+  border: 0
+  background: #e7a61a
+  border-radius: 4px
+  color: #fff
+  cursor: pointer
+  font: inherit
+  outline: 0
+  padding: 12px 20px
+  transition: all .1s linear
+
+
+.display  
+  grid-area: 1 / 1 / 1 / span 4
+  // height: 50
+  // width: 214
+  font: $font-stack
+  border: 0
+  background: grey
+  border-radius: 4px
+  box-shadow: 2px 5px 3px #575757
+  color: #fff
+  cursor: pointer
+  font: inherit
+  margin: 1 5 6 0
+  outline: 0
+  padding: 12px 20px
+  transition: all .1s linear
+
+.regular-key
+  // min-height: 100
+  // min-width: 100
+  // background: white
+  
+.one
+  grid-column: 1
+  grid-row: 5
+  
+.two
+  grid-column: 2
+  grid-row: 5
+  
+.three
+  grid-column: 3
+  grid-row: 5
+
+.four
+  grid-column: 1
+  grid-row: 4
+
+.five
+  grid-column: 2
+  grid-row: 4
+
+.six
+  grid-column: 3
+  grid-row: 4
+
+.seven
+  grid-column: 1
+  grid-row: 3
+
+.eight
+  grid-column: 2
+  grid-row: 3
+
+.nine
+  grid-column: 3
+  grid-row: 3
+
+.zero
+  grid-area: 6 / 1 / 6 / 3
+  
+.clear
+  grid-column: 1
+  grid-row: 2
+  
+.slash
+  grid-column: 2
+  grid-row: 2
+  
+.star
+  grid-column: 3
+  grid-row: 2
+  
+.minus
+  grid-column: 4
+  grid-row: 2
+  
+.plus
+  grid-area: 3 / 4 / 5 / 4   
+
+.enter
+  grid-area: 5 / 4 / 7  /4
+  
+.period
+  grid-column: 3
+  grid-row: 6
+
+button
+  // height: 50
+  // width: 50
+  border: 0
+  background: #0087cc
+  border-radius: 4px
+  box-shadow: 2px 5px 3px #006599
+  color: #fff
+  cursor: pointer
+  font: inherit
+  // margin: 1 5 6 0
+  outline: 0
+  padding: 12px 20px
+  transition: all .1s linear
+
+button:active, .press
+  box-shadow: 0 2px 0 #006599
+  transform: translateY(3px)
+
+//- button#zero
+//-   width: 106
+
+
+//- button.tall
+//-   height: 106
+
+//- section
+//-   display: flex
+//-   margin: 0 auto
+
+//- div#one
+//-   flex: 0 0 65%
+
+//- div#right
+//-   flex: 1
+
+//- div.calculator
+//-   margin: 0 auto
+//-   width: 221
+//-   border: 0
+//-   background: #e7a61a
+//-   border-radius: 4px
+//-   color: #fff
+//-   cursor: pointer
+//-   font: inherit
+//-   outline: 0
+//-   padding: 12px 20px
+//-   transition: all .1s linear
