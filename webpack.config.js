@@ -29,12 +29,9 @@ module.exports = {
         }
       },
 
-      // {
-      //   loader: 'postcss-loader',
-      //   options: {
-      //     plugins: () => [ require('autoprefixer') ]
-      //   }
-      // },
+      { test: /assets\*$/,
+        loader: 'file-loader'
+      },
 
       { test: /\.styl$/,
         use: [
