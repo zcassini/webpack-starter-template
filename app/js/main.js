@@ -30,12 +30,12 @@ const playSound = snd => {
 const downSound = playSound('sndKeyDown')
 const upSound   = playSound('sndKeyUp')
 
+
 const keyMaker = (key, val, id) => ({
   'keys'           : key,
   'is_exclusive'   : true,
   'on_keydown'     : () => {
     downSound()
-    console.log(key)
     update(val)
     document.getElementById(id || val).classList.toggle('press')
   },
@@ -90,3 +90,40 @@ const my_combos = listener.register_many([
   keyMaker('enter', '=', 'enter')
 ])
 
+const registerMouseClick = (val, id) => {
+  document.getElementById(id).onmousedown = () => {
+    downSound()
+    update(val)
+  }
+  document.getElementById(id).onmouseup = () => {
+    upSound()
+  }
+}
+
+const mousebuttons = { 1: '1',
+                       2: '2',
+                       3: '3',
+                       4: '4',
+                       5: '5',
+                       6: '6',
+                       7: '7',
+                       8: '8',
+                       9: '9',
+                       0: '0',
+                       // decimal:  '.',
+                       // enter:    'enter',
+                       // plus:     '+',
+                       // minus:    '-',
+                       // star:    '*',
+                       // slash:    '/',
+                       // C:        'C'
+                       '.':     'decimal',
+                       '=':     'enter',
+                       '+':     'plus',
+                       '-':     'minus',
+                       '*':     'star',
+                       '/':     'slash',
+                       C:       'C'
+                     }
+
+for (let mb in mousebuttons) registerMouseClick(mb, mousebuttons[mb])
